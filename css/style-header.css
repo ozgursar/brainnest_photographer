@@ -17,7 +17,6 @@
   border-radius: max(80px, 4vw);
   overflow: hidden;
   min-height: max(36px, 3vw);
-  transition: width 200ms ease;
 }
 
 .logo-container img {
@@ -29,7 +28,7 @@
 .logo-container h1 {
   font-size: clamp(1rem, 1.2vw, 5rem);
   line-height: 1;
-  transition: opacity 200ms ease;
+  transition: all 250ms ease;
   white-space: nowrap;
   margin-right: 20px;
 }

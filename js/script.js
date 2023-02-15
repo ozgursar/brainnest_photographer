@@ -9,9 +9,11 @@ function handleIntersection(entries) {
     if (reducedWidth>0 && reducedWidth<=logoWidth) {
       logo.style.width = reducedWidth + "px"
       logo.style.opacity = entry.intersectionRatio
-      logo.style.display = "inline"
+      logo.style.marginRight = "20px"
     } else {
-      logo.style.display = "none"
+      logo.style.width = 0
+      logo.style.padding = 0
+      logo.style.marginRight = 0
     }
   })
 }
