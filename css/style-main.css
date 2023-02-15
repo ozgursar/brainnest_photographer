@@ -1,0 +1,9 @@
+.main-spacer {
+  height: calc(5vw + max(2rem, 1.2vw));
+  background-color: transparent;
+}
+
+.main {
+  padding: 0 6vw;
+  height: 4000px;
+}
