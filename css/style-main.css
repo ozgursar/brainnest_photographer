@@ -1,8 +1,59 @@
 .main-spacer {
-  height: calc(5vw + max(2rem, 1.2vw));
+  margin-top: 10px;
+  height: 100px;
   background-color: transparent;
 }
 
 .main {
   padding: 0 60px;
+}
+
+#hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-subtitle {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 22px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.cta-button {
+  padding: 16px 40px;
+  color: var(--secondary);
+  background-color: var(--accent);
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+
+.hero-image {
+  overflow: hidden;
+  align-self: end;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* MOBILE */
+@media (max-width: 529px) {
+  .main {
+    padding: 0 25px;
+  }
+}
+
+/* TABLET */
+@media (min-width: 530px) and (max-width: 1000px) {
+  .main {
+    padding: 0 40px;
+  }
 }

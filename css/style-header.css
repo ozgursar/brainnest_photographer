@@ -22,18 +22,27 @@
 }
 
 .logo-container img {
-  padding: 10px;
+  padding: 12px;
 }
 
-.logo-container h1 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
+.logo-container .logo-text {
+  font-size: 1.1em;
+  font-weight: 700;
   overflow: hidden;
   line-height: 1;
   transition: all 250ms ease;
   transition-property: width, opacity;
   white-space: nowrap;
   padding-right: 10px;
+}
+
+.logo-text span{
+  display: block;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-family: monospace;
+  letter-spacing: 2.2px;
+  line-height: 1;
 }
 
 

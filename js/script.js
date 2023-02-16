@@ -1,6 +1,6 @@
 // Logo animation
 const target = document.querySelector('.main-spacer')
-const logo = document.querySelector('.logo-container h1')
+const logo = document.querySelector('.logo-container .logo-text')
 const logoWidth = logo.clientWidth
 
 function handleIntersection(entries) {

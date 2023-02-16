@@ -30,12 +30,17 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--heading);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 64px;
 }
 
 h2, h3, h4, h5, h6 {
-  color: var(--heading);
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 
@@ -64,4 +69,20 @@ h2, h3, h4, h5, h6 {
 }
 .icon-menu:before {
   content: "\e903";
+}
+
+
+/* MOBILE */
+@media (max-width: 529px) {
+  h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+  }
+}
+
+/* TABLET */
+@media (min-width: 530px) and (max-width: 1000px) {
+  h2, h3, h4, h5, h6 {
+    color: var(--heading);
+    margin-top: 30px;
+  }
 }
