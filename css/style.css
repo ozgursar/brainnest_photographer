@@ -1,12 +1,15 @@
 @import "./typography.css";
 @import "./style-header.css";
+@import "./style-navigation.css";
 @import "./style-main.css";
 @import "./style-footer.css";
 
 :root {
   --accent: #f2a70c;
   --secondary: #021b29;
+  --heading: #fff;
   --body-text-color: hsla(0, 0%, 100%, 0.5);
+  scroll-behavior: smooth;
 }
 
 * {
@@ -19,6 +22,8 @@ body {
   background-color: var(--secondary);
   color: var(--body-text-color);
   font-family: 'Inter', sans-serif;
-  font-size: 1rem; /* Fallback */
-  font-size: clamp(1rem, 1.2vw, 1.5rem);
+}
+
+section {
+scroll-margin-top: 150px;
 }

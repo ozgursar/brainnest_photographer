@@ -1,10 +1,13 @@
 .header {
   position: fixed;
-  left: 0%;
-  top: 2vw;
-  right: 0%;
-  width: 100%;
-  padding: 0 2vw;
+  left: 0;
+  right: 0;
+  top: 40px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
   background-color: transparent;
 }
 
@@ -14,21 +17,38 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: max(80px, 4vw);
-  overflow: hidden;
-  min-height: max(36px, 3vw);
+  border-radius: 80px;
+  text-decoration: none;
 }
 
 .logo-container img {
-  height: clamp(30px, 2.4vw, 7rem);
   padding: 10px;
-  width: auto;
 }
 
 .logo-container h1 {
-  font-size: clamp(1rem, 1.2vw, 5rem);
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  overflow: hidden;
   line-height: 1;
   transition: all 250ms ease;
+  transition-property: width, opacity;
   white-space: nowrap;
-  margin-right: 20px;
+  padding-right: 10px;
+}
+
+
+/* MOBILE */
+@media (max-width: 529px) {
+  .header {
+    top: 20px;
+    padding: 0 20px;
+  }
+}
+
+/* TABLET */
+@media (min-width: 530px) and (max-width: 1000px) {
+  .header {
+    top: 30px;
+    padding: 0 30px;
+  }
 }
