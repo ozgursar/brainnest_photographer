@@ -9,6 +9,8 @@
   --secondary: #021b29;
   --heading: #fff;
   --body-text-color: hsla(0, 0%, 100%, 0.5);
+  --dark-bg: #01141f;
+  --large-text: hsla(0, 0%, 100%, 0.5);
   scroll-behavior: smooth;
 }
 
@@ -25,5 +27,5 @@ body {
 }
 
 section {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 50px;
 }

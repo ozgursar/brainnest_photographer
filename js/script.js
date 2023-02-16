@@ -30,3 +30,21 @@ const handleMenuClick = (e) => {
   menu.classList.toggle('open')
 }
 menu.addEventListener('click', handleMenuClick)
+
+// Expand portfolio grid items
+const gridContainer = document.querySelector(".portfolio-items-wrapper")
+const expandButton = document.querySelector(".expand-button")
+const expandButtonIcon = document.querySelector(".expand-button i")
+
+const handleExpandItems = () => {
+  gridContainer.classList.toggle("expanded")
+  if (expandButtonIcon.classList.contains("icon-chevron-down")) {
+    expandButtonIcon.classList.remove("icon-chevron-down")
+    expandButtonIcon.classList.add("icon-chevron-up")
+  } else {
+    expandButtonIcon.classList.remove("icon-chevron-up")
+    expandButtonIcon.classList.add("icon-chevron-down")
+  }
+}
+
+expandButton.addEventListener('click', handleExpandItems)

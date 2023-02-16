@@ -18,10 +18,15 @@
   src: url(../fonts/Inter-ExtraBold.ttf) format('truetype');
   font-weight: 700;
 }
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/Inter-Black.ttf) format('truetype');
+  font-weight: 800;
+}
 
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.ttf?sss112') format('truetype');
+  src: url('../fonts/icomoon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -39,8 +44,28 @@ h1 {
   font-size: 64px;
 }
 
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
 h2, h3, h4, h5, h6 {
   margin-top: 50px;
+}
+
+.large-text {
+  max-width: 52%;
+  color: var(--large-text-color);
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.number-span {
+  color: var(--accent);
+  font-size: 0.9em;
 }
 
 
@@ -58,9 +83,6 @@ h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-close:before {
-  content: "\e900";
-}
 .icon-camera-iris:before {
   content: "\e901";
 }
@@ -70,6 +92,43 @@ h2, h3, h4, h5, h6 {
 .icon-menu:before {
   content: "\e903";
 }
+.icon-close:before {
+  content: "\e900";
+}
+.icon-chevron-left:before {
+  content: "\e904";
+}
+.icon-chevron-right:before {
+  content: "\e905";
+}
+.icon-chevron-down:before {
+  content: "\e906";
+}
+.icon-chevron-up:before {
+  content: "\e90c";
+}
+.icon-circle-small:before {
+  content: "\e907";
+}
+.icon-eye-outline:before {
+  content: "\e90d";
+}
+.icon-loupe:before {
+  content: "\e90e";
+}
+.icon-linkedin-1:before {
+  content: "\e908";
+}
+.icon-facebook:before {
+  content: "\e909";
+}
+.icon-instagram:before {
+  content: "\e90a";
+}
+.icon-pinterest:before {
+  content: "\e90b";
+}
+
 
 
 /* MOBILE */
@@ -82,7 +141,6 @@ h2, h3, h4, h5, h6 {
 /* TABLET */
 @media (min-width: 530px) and (max-width: 1000px) {
   h2, h3, h4, h5, h6 {
-    color: var(--heading);
     margin-top: 30px;
   }
 }
