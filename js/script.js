@@ -46,5 +46,43 @@ const handleExpandItems = () => {
     expandButtonIcon.classList.add("icon-chevron-down")
   }
 }
-
 expandButton.addEventListener('click', handleExpandItems)
+
+// Modal
+const modal = document.querySelector(".modal")
+const modalContent = document.querySelector(".modal-content")
+const modalImage = document.querySelector(".modal-image")
+const portfolioItems = document.querySelectorAll(".portfolio-item")
+const closeIcon = document.querySelector(".icon-close")
+const body = document.querySelector("body")
+
+const openModal = (e) => {
+  body.style.overflow = "hidden"
+  modalImage.src = e.target.querySelector(".portfolio-item img").getAttribute("src")
+  modalImage.alt = e.target.querySelector(".portfolio-item img").getAttribute("alt")
+  modal.style.display = "block"
+}
+
+const closeModal = (e) => {
+  if (e.target && !e.target.classList.contains("modal-image")) {
+    body.style.overflow = "auto"
+    modal.style.display = "none"
+  }
+}
+
+// Modal event listeners
+closeIcon.addEventListener('click', closeModal)
+modal.addEventListener('click', closeModal)
+
+for (let i=0; i<portfolioItems.length; i++) {
+  portfolioItems[i].addEventListener('click', openModal)
+}
+
+document.addEventListener('keydown', function(e) {
+  if(e.key === "Escape") {
+    body.style.overflow = "auto"
+    modal.style.display = "none"
+  }
+});
+
+

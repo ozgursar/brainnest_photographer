@@ -3,6 +3,7 @@
 @import "./style-navigation.css";
 @import "./style-main.css";
 @import "./style-footer.css";
+@import "./style-modal.css";
 
 :root {
   --accent: #f2a70c;
@@ -11,6 +12,7 @@
   --body-text-color: hsla(0, 0%, 100%, 0.5);
   --dark-bg: #01141f;
   --large-text: hsla(0, 0%, 100%, 0.5);
+  --modal-background: rgba(0,0,0,0.85);
   scroll-behavior: smooth;
 }
 
