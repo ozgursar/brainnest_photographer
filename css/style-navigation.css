@@ -78,8 +78,28 @@ nav ul li a {
   font-size: 1.1em;
   font-weight: 400;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+}
+
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .nav-wrapper span {
+    display: none;
+  }
+  .nav-wrapper nav{
+    top: 8px;
+    left: auto;
+    padding: 0;
+  }
+  .nav-wrapper.open nav{
+    max-height: 300px;
+  }
+  nav ul li {
+    padding: 5px 15px;
+  }
 }

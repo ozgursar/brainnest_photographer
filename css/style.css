@@ -32,7 +32,7 @@ section {
   scroll-margin-top: 50px;
 }
 
-dialog {
+figure, dialog {
   margin: 0;
   padding: 0;
   border: 0;

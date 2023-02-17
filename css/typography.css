@@ -1,5 +1,10 @@
 @font-face {
   font-family: 'Inter';
+  src: url(../fonts/Inter-Light.ttf) format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Inter';
   src: url(../fonts/Inter-Regular.ttf) format('truetype');
   font-weight: 400;
 }
@@ -39,12 +44,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading);
 }
 
-h1 {
-  margin-bottom: 20px;
-  font-size: 64px;
-  font-weight: 600;
-}
-
 h2 {
   font-size: 3em;
 }
@@ -52,24 +51,6 @@ h2 {
 h3 {
   font-size: 1.7em;
 }
-
-h2, h3, h4, h5, h6 {
-  margin-top: 50px;
-}
-
-.large-text {
-  max-width: 52%;
-  color: var(--large-text-color);
-  font-size: 1.1em;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.number-span {
-  color: var(--accent);
-  font-size: 0.7em;
-}
-
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -138,11 +119,17 @@ h2, h3, h4, h5, h6 {
   h2, h3, h4, h5, h6 {
     margin-top: 20px;
   }
+  h2 {
+    font-size: 2.5em;
+  }  
 }
 
 /* TABLET */
 @media (min-width: 530px) and (max-width: 1000px) {
   h2, h3, h4, h5, h6 {
     margin-top: 30px;
+  }
+  h2 {
+    font-size: 2.7em;
   }
 }

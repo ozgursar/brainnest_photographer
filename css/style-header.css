@@ -8,8 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
   background-color: transparent;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 40px;
 }
 
 .logo-container {
@@ -46,19 +48,9 @@
   line-height: 1;
 }
 
-
-/* MOBILE */
-@media (max-width: 529px) {
-  .header {
-    top: 20px;
-    padding: 0 20px;
-  }
-}
-
 /* TABLET */
-@media (min-width: 530px) and (max-width: 1000px) {
+@media (max-width: 1000px) {
   .header {
-    top: 30px;
-    padding: 0 30px;
+    padding: 0 20px;
   }
 }

@@ -1,3 +1,8 @@
+@import "./style-main-hero.css";
+@import "./style-main-portfolio.css";
+@import "./style-main-about.css";
+@import "./style-main-clients.css";
+
 .main-spacer {
   margin-top: 10px;
   height: 80px;
@@ -6,168 +11,26 @@
 
 .main section .section-inner {
   max-width: 1300px;
-  padding: 0 60px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
-
-/* HERO SECTION */
-#hero-section .section-inner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 700px;
-}
-
-.hero-subtitle {
-  color: hsla(0, 0%, 100%, 0.5);
-  font-size: 22px;
-  line-height: 1.8;
-  font-weight: 500;
-}
-
-.cta-button {
-  text-decoration: none;
-}
-
-.expand-button {
-  margin-top: 25px;
-  margin-left: auto;
-}
-
-.cta-button button, .expand-button {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 16px 40px;
-  color: var(--secondary);
-  background-color: var(--accent);
-  border: none;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-}
-
-.cta-button span, .expand-button span {
-  padding-left: 8px;
-  line-height: 1.8;
-}
-
-.cta-button i, .expand-button i {
-  font-size: 1.8em;
-  transition: transform 0.3s ease-in-out;
-}
-
-.cta-button:hover i{
-  transform: translateX(8px);
-}
-
-.hero-content {
-  max-width: 52%;
-}
-
-.hero-image {
-  position: absolute;
-  overflow: hidden;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  opacity: 0.8;
-}
-
-.hero-image img {
-  width: 700px;
-  height: 700px;
-  object-fit: cover;
-}
-
-section.dark-bg {
+.main section.dark-bg, .main section.light-bg {
   padding: 60px 0;
+}
+
+.main section.dark-bg {
   background-color: var(--dark-bg);
 }
 
-/* PORTFOLIO ITEMS */
-article {
-  margin-bottom: 80px;
+.large-text {
+  color: var(--large-text-color);
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-.portfolio-items-wrapper {
-  display: grid;
-  /*grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));*/
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-  max-height: 240px;
-  overflow: hidden;
-  transition: max-height 0.55s ease-out;
+.accent-span {
+  color: var(--accent);
 }
 
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-.portfolio-items-wrapper.expanded {
-  max-height: 1000px;
-}
-
-.portfolio-item {
-  position: relative;
-  width: 100%;
-  cursor: pointer;
-}
-
-
-.portfolio-item img{
-  display: block;
-  width: 100%;
-  height: 240px;
-  border-radius: 4px;
-  object-fit: cover;
-  -drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-.portfolio-item::before {
-  content: "\A";
-  position: absolute;
-  z-index: 1;
-  border-radius: 4px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.portfolio-item:hover::before {
-  background: var(--accent);
-  opacity: 0.7;
-}
-
-.portfolio-item:hover::after {
-  content: "\e90e";
-  font-family: "icomoon";
-  font-size: 3em;
-  position: absolute;
-  z-index: 2;
-  top:0;
-  left: 0;
-  color: var(--secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;  
-}
-
-.portfolio_item.hide {
-  display: none;
-}
