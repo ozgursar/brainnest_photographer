@@ -1,4 +1,4 @@
-// Logo animation
+// Logo animation using IntersectionObserver
 const target = document.querySelector('.main-spacer')
 const logo = document.querySelector('.logo-container .logo-text')
 const logoWidth = logo.clientWidth
@@ -24,19 +24,23 @@ function handleIntersection(entries) {
 const observer = new IntersectionObserver(handleIntersection, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] })
 observer.observe(target)
 
-// Hamburger menu animation
+// Hamburger menu dropdown toggle
 const menu = document.querySelector(".nav-wrapper")
 const handleMenuClick = (e) => {
   menu.classList.toggle('open')
 }
 menu.addEventListener('click', handleMenuClick)
 
-// Expand portfolio grid items
-const gridContainer = document.querySelector(".portfolio-items-wrapper")
-const expandButton = document.querySelector(".expand-button")
-const expandButtonIcon = document.querySelector(".expand-button i")
+// Expand portfolio items toggle
+const expandButtons = document.querySelectorAll(".expand-button")
+const handleExpandItems = (e) => {
+  // Target only the portfolio items in this button's parent container
+  // currentTarget is the button element
+  // Does not matter if user clicks on the inner text or icon inside the button
+  const parent = e.currentTarget.parentElement
+  const gridContainer = parent.querySelector(".portfolio-items-wrapper")
+  const expandButtonIcon = parent.querySelector(".expand-button i")
 
-const handleExpandItems = () => {
   gridContainer.classList.toggle("expanded")
   if (expandButtonIcon.classList.contains("icon-chevron-down")) {
     expandButtonIcon.classList.remove("icon-chevron-down")
@@ -46,7 +50,11 @@ const handleExpandItems = () => {
     expandButtonIcon.classList.add("icon-chevron-down")
   }
 }
-expandButton.addEventListener('click', handleExpandItems)
+
+for (let i=0; i<expandButtons.length; i++) {
+  expandButtons[i].addEventListener('click', handleExpandItems)
+}
+
 
 // Modal
 const modal = document.querySelector(".modal")

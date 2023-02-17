@@ -90,6 +90,10 @@ section.dark-bg {
 }
 
 /* PORTFOLIO ITEMS */
+article {
+  margin-bottom: 80px;
+}
+
 .portfolio-items-wrapper {
   display: grid;
   /*grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));*/
@@ -97,7 +101,7 @@ section.dark-bg {
   gap: 30px;
   max-height: 240px;
   overflow: hidden;
-  transition: max-height 1s ease-out;
+  transition: max-height 0.55s ease-out;
 }
 
 figure {
