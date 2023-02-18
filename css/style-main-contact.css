@@ -84,8 +84,8 @@ img.check {
   bottom: 10px;
   right: 0;
   z-index: 1;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   opacity: 0;
 }
 
@@ -98,16 +98,19 @@ img.check {
 }
 
 input:focus, textarea:focus {
-  border: 3px solid blue;
-  box-shadow: 1px 1px 5px var(--subtle-gray);
+  box-shadow: 0 0 0 1px blue;
 }
 
 input:not(:placeholder-shown):invalid {
-  border: 3px solid red;
+  box-shadow: 0 0 0 3px red;
 }
 
 input:not(:placeholder-shown):valid {
-  border: 3px solid green;
+  box-shadow: 0 0 0 3px green;
+}
+
+input[type="checkbox"] {
+  box-shadow: none!important;
 }
 
 input:not(:placeholder-shown):valid +img.check {
