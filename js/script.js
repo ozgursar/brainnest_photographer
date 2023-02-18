@@ -29,7 +29,9 @@ const menu = document.querySelector(".nav-wrapper")
 const handleMenuClick = (e) => {
   menu.classList.toggle('open')
 }
-menu.addEventListener('click', handleMenuClick)
+if (menu) {
+  menu.addEventListener('click', handleMenuClick)
+}
 
 // Expand portfolio items toggle
 const expandButtons = document.querySelectorAll(".expand-button")

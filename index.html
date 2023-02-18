@@ -185,7 +185,13 @@
         <div class="contact-content fade-in lazy-animate">
           <img src="./images/hero-image.png" alt="Jason Burton profile photo" class="contact-image">
           <h2>Feel inspired?</h2>
-          <p class="large-text">Lets connect! I'd love hear about your story and how I might be able to help through photography.</p>  
+          <p class="large-text">Lets connect! I'd love hear about your story and how I might be able to help through photography.</p>
+          <a href="mailto:james.burton.notreal@gmail.com?subject=Hello" class="cta-button">
+            <button>
+              <span>Email me</span>
+              <i class="icon-chevron-right" aria-hidden="true"></i>
+            </button>
+          </a>
         </div>
         <form action="./thankyou.html" method="get" id="contact_form">
           <div class="form-main">
@@ -246,6 +252,23 @@
                   placeholder="+CountryCode AreaCode PhoneNumber">
                   <img src="./images/check.svg" alt="Valid icon" class="check">
                   <small class="incorrect">* Please enter a valid phone number</small>
+              </div>
+              <div class="input-group">
+                <span class="checkboxes-label">I would like to:</span>
+                <div class="checkboxes">
+                  <label for="checkbox_hire">
+                    <input type="checkbox" name="checkbox_hire" id="checkbox_hire">
+                    Hire you for a project
+                  </label>
+                  <label for="checkbox_ask">
+                    <input type="checkbox" name="checkbox_ask" id="checkbox_ask">
+                    Ask a question
+                  </label>
+                  <label for="checkbox_partnership">
+                    <input type="checkbox" name="checkbox_partnership" id="checkbox_partnership">
+                    Talk partnership
+                  </label>  
+                </div>
               </div>
             </div>
             <div class="message-wrapper">

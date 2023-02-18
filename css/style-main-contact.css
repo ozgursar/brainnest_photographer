@@ -14,11 +14,12 @@
 }
 
 #contact h2 {
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 #contact .large-text {
   max-width: 90%;
+  margin-bottom: 40px;
 }
 
 /* FORM STYLES */
@@ -45,7 +46,7 @@ input, label {
   max-width: min(580px, 100%);
 }
 
-label {
+label, .checkboxes-label {
   color: var(--secondary);
   text-transform: uppercase;
   font-size: 0.70rem;
@@ -129,6 +130,19 @@ input[type="email"]:not(:placeholder-shown):not(:focus):invalid ~.incorrect, inp
 
 #contact .expand-button:hover i{
   transform: translateX(8px);
+}
+
+.checkboxes label {
+  display: grid;
+  grid-template-columns: 15px auto;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+  padding: 3px 0;
+  margin-left: -5px;
+  text-transform: none;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 /* TABLET */

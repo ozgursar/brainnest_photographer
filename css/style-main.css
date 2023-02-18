@@ -10,6 +10,10 @@
   background-color: transparent;
 }
 
+.main {
+  min-height: calc(100vh - 197px);
+}
+
 .main section .section-inner {
   max-width: 1300px;
   padding: 0 40px;
