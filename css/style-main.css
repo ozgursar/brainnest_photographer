@@ -2,6 +2,7 @@
 @import "./style-main-portfolio.css";
 @import "./style-main-about.css";
 @import "./style-main-clients.css";
+@import "./style-main-contact.css";
 
 .main-spacer {
   margin-top: 10px;

@@ -1,10 +1,15 @@
 .footer {
+  color: var(--secondary);
+  background-color: var(--accent);
+}
+
+.footer-inner-wrapper {
+  max-width: 1300px;
+  padding: 20px 40px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--secondary);
-  background-color: var(--accent);
-  padding: 20px 40px;
 }
 
 .footer p {
@@ -20,7 +25,7 @@
 .social-icons {
   margin-top: 15px;
   display: flex;
-  gap: 25px;
+  gap: 20px;
   justify-content: flex-end;
   font-size: 1.9em;
 }

@@ -1,0 +1,148 @@
+#contact .section-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-image {
+  width: 120px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--accent);
+  border-radius: 50%;
+}
+
+#contact h2 {
+  margin: 0;
+}
+
+#contact .large-text {
+  max-width: 90%;
+}
+
+/* FORM STYLES */
+#contact_form {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+}
+
+.form-main {
+  padding: 25px 30px 50px 30px;
+  border-radius: 4px;
+  background-color: var(--accent);
+}
+
+input, label {
+  display: block;
+}
+
+.input-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 25px;
+  max-width: min(580px, 100%);
+}
+
+label {
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-size: 0.70rem;
+  font-weight: 600;
+  padding-bottom: 3px;
+}
+
+input, textarea {
+  color: var(--secondary);
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  width: 97%;
+  padding: 8px;
+}
+
+.message-wrapper {
+  margin-top: 30px;
+}
+
+textarea {
+  font-family: inherit;
+  width: calc(100% - 8px);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--subtle-gray);
+}
+
+.input-group {
+  position: relative;  
+}
+
+img.check {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+}
+
+.incorrect {
+  position: absolute;
+  font-size: 0.75em;
+  color: var(--secondary);
+  padding-top: 4px;
+  opacity: 0;
+}
+
+input:focus, textarea:focus {
+  border: 3px solid blue;
+  box-shadow: 1px 1px 5px var(--subtle-gray);
+}
+
+input:not(:placeholder-shown):invalid {
+  border: 3px solid red;
+}
+
+input:not(:placeholder-shown):valid {
+  border: 3px solid green;
+}
+
+input:not(:placeholder-shown):valid +img.check {
+  opacity: 1;
+}
+
+input[type="text"]:not(:placeholder-shown):invalid ~.incorrect {
+  opacity: 1;
+}
+
+input[type="email"]:not(:placeholder-shown):not(:focus):invalid ~.incorrect, input[type="tel"]:not(:placeholder-shown):not(:focus):invalid ~.incorrect {
+  opacity: 1;
+}
+
+#contact .expand-button {
+  border: 2px solid var(--secondary);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#contact .expand-button:hover i{
+  transform: translateX(8px);
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+  #contact .section-inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  #contact .large-text {
+    max-width: none;
+  }
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

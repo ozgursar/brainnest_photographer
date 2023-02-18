@@ -93,4 +93,30 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+// Animate objects that come into viewport
+let observerOptions = {
+  rootMargin: '0px',
+  threshold: 0.35
+}
 
+const observerLazyAnimate = new IntersectionObserver(lazyAnimateCallback, observerOptions);
+
+function lazyAnimateCallback(entries, observerLazyAnimate) {
+  entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        //trigger animation and remove from observe list
+        if (entry.target.classList.contains("top-about-image") || entry.target.classList.contains("bottom-about-image")) {
+          entry.target.classList.add("played")  
+        } else {
+          entry.target.classList.add("animated")
+        }
+        observerLazyAnimate.unobserve(entry.target)
+      }
+  });
+};
+
+document.querySelectorAll('.lazy-animate').forEach((i) => {
+  if (i) {
+    observerLazyAnimate.observe(i)
+  }
+});
