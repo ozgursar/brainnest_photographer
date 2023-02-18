@@ -22,7 +22,10 @@ function handleIntersection(entries) {
 }
 
 const observer = new IntersectionObserver(handleIntersection, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] })
-observer.observe(target)
+if (target) {
+  observer.observe(target)
+}
+
 
 // Hamburger menu dropdown toggle
 const menu = document.querySelector(".nav-wrapper")
@@ -38,7 +41,6 @@ const expandButtons = document.querySelectorAll(".expand-button")
 const handleExpandItems = (e) => {
   // Target only the portfolio items in this button's parent container
   // currentTarget is the button element
-  // Does not matter if user clicks on the inner text or icon inside the button
   const parent = e.currentTarget.parentElement
   const gridContainer = parent.querySelector(".portfolio-items-wrapper")
   const expandButtonIcon = parent.querySelector(".expand-button i")
@@ -52,9 +54,10 @@ const handleExpandItems = (e) => {
     expandButtonIcon.classList.add("icon-chevron-down")
   }
 }
-
-for (let i=0; i<expandButtons.length; i++) {
-  expandButtons[i].addEventListener('click', handleExpandItems)
+if (expandButtons) {
+  for (let i=0; i<expandButtons.length; i++) {
+    expandButtons[i].addEventListener('click', handleExpandItems)
+  }
 }
 
 
@@ -81,13 +84,13 @@ const closeModal = (e) => {
 }
 
 // Modal event listeners
-closeIcon.addEventListener('click', closeModal)
-modal.addEventListener('click', closeModal)
-
-for (let i=0; i<portfolioItems.length; i++) {
-  portfolioItems[i].addEventListener('click', openModal)
+if (closeIcon) closeIcon.addEventListener('click', closeModal)
+if (modal) modal.addEventListener('click', closeModal)
+if (portfolioItems) {
+  for (let i=0; i<portfolioItems.length; i++) {
+    portfolioItems[i].addEventListener('click', openModal)
+  }
 }
-
 document.addEventListener('keydown', function(e) {
   if(e.key === "Escape") {
     body.style.overflow = "auto"
@@ -100,7 +103,6 @@ let observerOptions = {
   rootMargin: '0px',
   threshold: 0.35
 }
-
 const observerLazyAnimate = new IntersectionObserver(lazyAnimateCallback, observerOptions);
 
 function lazyAnimateCallback(entries, observerLazyAnimate) {
@@ -121,4 +123,45 @@ document.querySelectorAll('.lazy-animate').forEach((i) => {
   if (i) {
     observerLazyAnimate.observe(i)
   }
-});
+})
+
+// Testimonals slider
+let currentSlide = 0
+const testimonialsContainer = document.querySelector(".testimonials-slider")
+const testimonials = document.querySelectorAll(".testimonial-item")
+let slideAmount = 0
+if (testimonials.length) {
+  slideAmount = testimonialsContainer.offsetWidth + 5
+}
+const prevButton = document.querySelector("#testimonial-prev")
+const nextButton = document.querySelector("#testimonial-next")
+
+// get current position of slider
+let currentXPos
+const getCurrentPos = () => {
+  sliderTransformData = window.getComputedStyle(testimonialsContainer).getPropertyValue("transform")
+  if (sliderTransformData) {
+    currentXPos = parseInt(sliderTransformData.split(', ')[4])
+  }
+  return currentXPos
+}
+
+const handlePrev = () => {
+  if (currentSlide>0) {
+    currentSlide = currentSlide - 1
+    testimonialsContainer.style.transform = `translateX(calc(${getCurrentPos()}px + ${slideAmount}px))`
+  }
+}
+const handleNext = () => {
+  if (currentSlide<testimonials.length-1) {
+    currentSlide = currentSlide + 1
+    testimonialsContainer.style.transform = `translateX(-${currentSlide*slideAmount}px)`
+  }
+}
+
+if (prevButton) {
+  prevButton.addEventListener('click', handlePrev)
+}
+if (nextButton) {
+  nextButton.addEventListener('click', handleNext)
+}
