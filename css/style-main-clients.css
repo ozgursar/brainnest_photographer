@@ -23,6 +23,33 @@
   opacity: 0.9;
 }
 
+.testimonials-wrapper {
+  position: relative;
+  margin: 100px 0 40px 0;
+}
+
+blockquote {
+  color: #fff;
+  font-style: italic;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 2;  
+}
+
+.quote-icon {
+  position: absolute;
+  top: -40px;
+  right: 40px;
+  z-index: 1;
+  width: 90px;
+  height: 90px;
+  opacity: 0.5;
+}
+
+.quote-icon path {
+  fill: var(--large-text);
+}
+
 /* TABLET */
 @media (max-width: 1000px) {
   .client-logo-container {
